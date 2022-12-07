@@ -1,0 +1,26 @@
+pragma solidity ^0.5.10;
+
+contract HouseRegistrationContract {
+    // Model a house
+    struct House {
+        uint houseNo;
+        string owner;
+    }
+    
+    // Read/write houses
+    mapping(uint => House) public houseList;
+    uint public houseCount;
+    
+    function registerNewHouse (string memory _owner) public {
+        houseCount ++;
+        houseList[houseCount] = House(houseCount, _owner); // Creates a new house & stores it into houseList
+    }
+    constructor() public {
+        registerNewHouse("Owner 1"); // Registers the 1st house to Owner 1
+        registerNewHouse("Owner 2"); // Registers the next house to Owner 2
+    }
+
+    function transferHouse(uint _houseNo, string memory _owner) public {
+        houseList[_houseNo] = House(_houseNo, _owner); // create a new house & update the houseList with the new house
+    }
+}
