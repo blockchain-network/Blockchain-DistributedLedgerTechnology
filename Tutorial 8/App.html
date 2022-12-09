@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="https://unpkg.com/jquery@latest/dist/jquery.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/web3@0.20.5/dist/web3.min.js"></script>
+        <script src="App.js"></script>
+        <link rel="stylesheet" href="App.css">
+
+        <script>
+            function openTab(evt, tabName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+                
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'taskregistration')">Register New Task</button>
+            <button class="tablinks" onclick="openTab(event, 'checktask')">Check Task</button>
+        </div>
+        <div id="taskregistration" class="tabcontent">
+            <h2>Add New Task</h2>
+            <div class="input-group">
+                <h3>Task ID</h3>
+                <input type="number" id="newTaskId" placeholder="Enter task id...">
+            </div>
+            <div class="input-group">
+                <h3>Description</h3>
+                <input type="text" id="newDescription" placeholder="Enter Description...">
+            </div>
+            <div class="input-group">
+                <h3>Due Date</h3>
+                <input type="number" id="newDueDate" placeholder="Enter Due Date...">
+            </div>
+            <div class="input-group">
+                <h3>Status</h3>
+                <input type="text" id="newStatus" placeholder="Enter Status...">
+            </div>
+            <div class="input-group">
+                <br/>
+                <button class="btn" id="button-register">Add Task</button>
+            </div>
+        </div>
+        <div id="checktask" class="tabcontent">
+            <h2>Check Task</h2>
+                <div class="input-group">
+                    <h3>Task ID</h3>
+                    <input type="text" id="taskID" placeholder="Enter task id...">
+                </div>
+                <div class="input-group">
+                    <br/>
+                    <button class="btn" id="button-task">Check Task</button>
+                </div>
+                <br/>
+            <span id="showtask"></span>
+        </div>
+    </body>
+</html>
