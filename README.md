@@ -10,6 +10,7 @@ If you want to use your own contract published, please go to the js file and rep
 
 
 **For Assignment**
+
 The following codes are the interactions using Web3 JS and Jquery to query and write into the smart contracts published using Goerli Testnet.
 If you want to use your own contract published, please go to the js file and replace the ABI, address and endpoint to the respective ABI of your contract, the contract address and the endpoint of your network.
 For the Assignment, it is a sample of running a digital portfolio on a blockchain network. There are 3 assets (Education, Certificates and Work Experience). The administrator of those 3 assets can used blockchain to create a new assets and update it accordingly when the user/person has completed their time there. This allows the users and recuiters to use the characteristics of the blockchain to save both time and money. 
