@@ -15,4 +15,8 @@ The following codes are the interactions using Web3 JS and Jquery to query and w
 If you want to use your own contract published, please go to the js file and replace the ABI, address and endpoint to the respective ABI of your contract, the contract address and the endpoint of your network.
 For the Assignment, it is a sample of running a digital portfolio on a blockchain network. There are 3 assets (Education, Certificates and Work Experience). The administrator of those 3 assets can used blockchain to create a new assets and update it accordingly when the user/person has completed their time there. This allows the users and recuiters to use the characteristics of the blockchain to save both time and money. 
 
-Web3JS documentation: https://www.npmjs.com/package/web3/v/0.20.5?activeTab=readme
+Web3JS Version 0.20.5 documentation: https://www.npmjs.com/package/web3/v/0.20.5?activeTab=readme
+
+Note: There are 2 versions of the Assignment Smart Contract. The main differences between the 2 is that it uses different versions of web3JS, currently it is hard to find the versions of web3js version 0.20.5 and some functions might be decrepated soon. Thus, I have updated my codes to the later version of web3JS using version 1.7.5.
+
+Web3JS Version 1.7.5 documentation: https://web3js.readthedocs.io/en/v1.7.5/
