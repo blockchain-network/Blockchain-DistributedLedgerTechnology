@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DigiPortfolio</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="DigiPortfolio">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/themify-icons.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+
+	<script type="text/javascript" src="https://unpkg.com/jquery@latest/dist/jquery.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/web3@1.7.5/dist/web3.min.js"></script>
+	<script src="js/App.js"></script>
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section clearfix">
+		<div class="container-fluid">
+			<a href="index.html" class="site-logo">
+				<img src="img/logo.png" alt="">
+			</a>
+			<div class="responsive-bar"><i class="fa fa-bars"></i></div>
+			<a href="" class="user"><img src="img/bitcoin-wallet.png" alt=""></a>
+			<button class="site-btn" id="connectWallet"> Connect Wallet </button>
+			
+			<nav class="main-menu">
+				<ul class="menu-list">
+					<li><a href="index.html">Home</a></li>
+					<li><button onclick="validate_EducationRegistrationUser()">Register Education</button></li>
+					<li><button onclick="validate_EducationUpdateUser()">Update Education</button></li>
+					<li><a href="viewEducation.html">View Education</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+
+	<!-- Page info section -->
+	<section class="page-info-section">
+		<div class="container">
+			<br/>
+			<br/>
+			<h2>Education</h2>
+			<div class="site-beradcamb">
+				<a href="index.html">Home</a>
+				<span><i class="fa fa-angle-right"></i> View Education</span>
+			</div>
+		</div>
+	</section>
+	<!-- Page info end -->
+
+
+	<!-- About section -->
+	<section class="about-section spad">
+		<div class="container">
+			<div id="educationList" class="tabcontent">
+				<h1>Education List</h1>
+				<hr/><br/>
+				<label for="searchbar">Search by Wallet Address:</label>
+				<input id="searchbar" onkeyup="search_EducationWalletAddress()" type="text" name="search" placeholder="Search Wallet Address..">
+				<br/>
+				<br/>
+
+				<table class="table"> 
+					<thead>
+						<tr>
+							<th scope="col">Education Number</th>
+							<th scope="col">Institution Name</th>
+							<th scope="col">Course</th>
+							<th scope="col">Start Date</th>
+							<th scope="col">End Date</th>
+							<th scope="col">Grade</th>
+							<th scope="col">Status</th>
+							<th scope="col">Wallet Address</th>
+						</tr>
+					</thead>
+					<tbody id="educationListResults">
+					</tbody>
+				</table>
+				<br/>
+				<span id="educationmessage"></span> <hr/> 
+			</div>
+		</div>
+	</section>
+	<!-- About section end -->
+
+
+	<!-- Fact section -->
+	<section class="fact-section gradient-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="fact">
+						<h2>60</h2>
+						<p>Support <br> Countries</p>
+						<i class="ti-basketball"></i>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="fact">
+						<h2>12K</h2>
+						<p>Transactions  <br> per hour</p>
+						<i class="ti-panel"></i>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="fact">
+						<h2>5B</h2>
+						<p>Largest <br> Transactions</p>
+						<i class="ti-stats-up"></i>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="fact">
+						<h2>4</h2>
+						<p>Years <br> of Experience</p>
+						<i class="ti-user"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<div class="row spad">
+				<div class="col-md-6 col-lg-3 footer-widget">
+					<img src="img/logo.png" class="mb-4" alt="">
+					<p>DigiPortfolio is a one stop platform for recuiters and job seekers.</p>
+					<span> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</span>
+				</div>
+				<div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
+					<h5 class="widget-title">Quick Links</h5>
+					<ul>
+						<li><a href="https://goerli.etherscan.io/" target="_blank">Block Explorer</a></li>
+						<li><a href="https://goerli.etherscan.io/blocks" target="_blank">Recent Blocks</a></li>
+						<li><a href="https://goerli.etherscan.io/txs" target="_blank">Recent Transactions</a></li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="footer-bottom">
+				<div class="row">
+					<div class="col-lg-8 text-center text-lg-right">
+						<ul class="footer-nav">
+							<li><a href="">DPA</a></li>
+							<li><a href="">Terms of Use</a></li>
+							<li><a href="">Privacy Policy </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
